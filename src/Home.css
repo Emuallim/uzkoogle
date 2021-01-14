@@ -1,0 +1,40 @@
+.home{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.home_header{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  align-items: center;
+}
+
+.home_header a{
+  margin-right: 20px;
+  text-decoration: inherit;
+  color: rgba(0,0,0,0.87);
+}
+
+.home_header a:hover{
+  text-decoration: underline;
+}
+
+.home_headerRight{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 13vw;
+}
+
+.home_headerRight > .MuiSvgIcon-root{
+  /* MuiSvgIcon-root is the className @material-ui gives every icon */
+  margin-right: 20px;
+}
+
+.apps:hover{
+  background: silver;
+  border-radius: 50%;
+  padding: 8px;
+}
