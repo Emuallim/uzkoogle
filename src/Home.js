@@ -3,6 +3,7 @@ import './Home.css';
 import { Link } from 'react-router-dom';
 import AppsIcon from '@material-ui/icons/Apps';
 import { Avatar } from '@material-ui/core';
+import Search from './Search';
 // we couda used <a> but it refreshes the page
 // but this does it w/o refresh
 
@@ -13,17 +14,20 @@ function Home() {
         <div className="home_headerLeft">
           <Link to='/about'>About</Link>
           <Link to='/store'>Store</Link>
-          {/* link */}
         </div>
         <div className="home_headerRight">
           <Link to='/gmail'>Gmail</Link>
           <Link to='/images'>Images</Link>
-          <AppsIcon className="apps" />
+          <AppsIcon className="appsIcon" />
           <Avatar />
-          {/* Avatar */}
         </div>
       </div>
-      <div className="home_body">home body here</div>
+      <div className="home_body">
+        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" />
+        <div className="home_inputContainer">
+          <Search />
+        </div>
+      </div>
     </div>
   )
 }

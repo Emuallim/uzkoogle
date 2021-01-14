@@ -29,12 +29,28 @@
 }
 
 .home_headerRight > .MuiSvgIcon-root{
-  /* MuiSvgIcon-root is the className @material-ui gives every icon */
+  /* MuiSvgIcon-root is the className @material-ui gives EVERY icon */
   margin-right: 20px;
 }
 
-.apps:hover{
+.appsIcon{
+  padding: 8px;
+}
+
+.appsIcon:hover{
   background: silver;
   border-radius: 50%;
   padding: 8px;
+}
+
+.home_body{
+  flex: 1;
+  display: flex;
+  margin-top: 10%;
+  flex-direction: column;
+}
+
+.home_body>img{
+  object-fit: contain;
+  height: 100px;
 }
