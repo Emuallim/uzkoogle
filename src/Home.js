@@ -25,7 +25,7 @@ function Home() {
       <div className="home_body">
         <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" />
         <div className="home_inputContainer">
-          <Search />
+          <Search hideButtons />
         </div>
       </div>
     </div>
