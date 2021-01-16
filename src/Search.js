@@ -4,8 +4,13 @@ import SearchIcon from "@material-ui/icons/Search";
 import MicIcon from "@material-ui/icons/Mic";
 import { Button } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
+import { useStateValue } from "./StateProvider";
+import { actionTypes } from "./reducer";
 
 function Search({ hideButtons = false }) {
+  // state{} = what data layer looks like
+  // dispatch = gun that shoots actions into data layer
+  const [{ }, dispatch] = useStateValue();
   // state = variables in react
   const [input, setInput] = useState('');
   const history = useHistory();
@@ -14,7 +19,14 @@ function Search({ hideButtons = false }) {
     e.preventDefault(); //stops page refresh
     // how to trigger the "Google Search" key when you hit enter
     console.log("You Entered >>", input);
-    // do something with input... come back and fix
+
+    dispatch({
+      type: actionTypes.SET_SEARCH_TERM,
+      term: input
+    })
+
+    // 1) here we push the user to the search page
+    // 2) put the search term inside the data layer
     history.push('/search');
   }
 
@@ -46,7 +58,6 @@ function Search({ hideButtons = false }) {
             <Button className="search_btnsHidden" onClick={search} variant="outlined">I'm Feeling Lucky</Button>
           </div>
         )}
-      {/* left at 01:39:25 */}
     </form>
   )
 }
