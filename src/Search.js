@@ -46,7 +46,7 @@ function Search({ hideButtons = false }) {
             <Button className="search_btnsHidden" onClick={search} variant="outlined">I'm Feeling Lucky</Button>
           </div>
         )}
-
+      {/* left at 01:39:25 */}
     </form>
   )
 }
