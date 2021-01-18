@@ -2,12 +2,18 @@ import React from 'react';
 import './SearchPage.css';
 import { useStateValue } from "./StateProvider";
 import useGoogleSearch from './useGoogleSearch';
+import Response from "./response";
+// left off at 02:33:00
 
 // https://cse.google.com/cse/create/new
 
 function SearchPage() {
   const [{ term }, dispatch] = useStateValue();
-  const { data } = useGoogleSearch(term);
+
+  // LIVE GOOGLE API CALL which is INSANE!
+  // const { data } = useGoogleSearch(term);
+  const data = Response; //copied api call from response.js
+  // uncomment useGoogleSearch once done with the page
 
   console.log(data);
   return (

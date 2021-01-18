@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import API_KEY from "./keys";
-// left off at 02:25:00
 
 const CONTEXT_KEY = "134bf04afc69804f1";
 // this tells google which search engine to use
