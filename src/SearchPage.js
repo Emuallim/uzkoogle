@@ -1,13 +1,15 @@
 import React from 'react';
 import './SearchPage.css';
 import { useStateValue } from "./StateProvider";
+import useGoogleSearch from './useGoogleSearch';
 
-// https://developers.google.com/custom-search/v1/using_rest
-// my custom api: AIzaSyCrFCbux3DyPs2lj9h_ir9YHTIUwWrREWI
-// free limit of 100 searches a day
+// https://cse.google.com/cse/create/new
 
 function SearchPage() {
   const [{ term }, dispatch] = useStateValue();
+  const { data } = useGoogleSearch(term);
+
+  console.log(data);
   return (
     <div className='searchPage'>
 
