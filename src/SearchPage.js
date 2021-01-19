@@ -11,7 +11,7 @@ import ImageIcon from "@material-ui/icons/Image";
 import LocalOfferIcon from "@material-ui/icons/LocalOffer";
 import RoomIcon from "@material-ui/icons/Room";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-// left off at 02:33:00
+// left off at 02:52:00
 
 // https://cse.google.com/cse/create/new
 
@@ -74,7 +74,13 @@ function SearchPage() {
           </div>
         </div>
       </div>
-      <div className='searchPage_results'>results</div>
+
+      {term && (
+        // render the results ONLY if there is search term
+        <div className='searchPage_results'>
+          {/* asdfdasf */}
+        </div>
+      )}
     </div>
   )
 }
