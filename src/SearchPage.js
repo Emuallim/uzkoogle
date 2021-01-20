@@ -16,7 +16,7 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 // https://cse.google.com/cse/create/new
 
 function SearchPage() {
-  const [{ term }, dispatch] = useStateValue();
+  const [{ term = 'tesla' }, dispatch] = useStateValue();
 
   // LIVE GOOGLE API CALL which is INSANE!
   // const { data } = useGoogleSearch(term);
@@ -78,7 +78,10 @@ function SearchPage() {
       {term && (
         // render the results ONLY if there is search term
         <div className='searchPage_results'>
-          {/* asdfdasf */}
+          <p className="searchPage_resultsCount">
+            {/* About 3000000 results (0.3 seconds) for tesla */}
+            About {data?.searchInformation.formattedTotalResults} results ({data?.searchInformation.formattedSearchTime} seconds) for {term}
+          </p>
         </div>
       )}
     </div>
