@@ -17,9 +17,9 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 
 function SearchPage() {
   const [{ term = 'tesla' }, dispatch] = useStateValue();
-
   // LIVE GOOGLE API CALL which is INSANE!
   // const { data } = useGoogleSearch(term);
+
   const data = Response; //copied api call from response.js
   // uncomment useGoogleSearch once done with the page
 
@@ -80,8 +80,23 @@ function SearchPage() {
         <div className='searchPage_results'>
           <p className="searchPage_resultsCount">
             {/* About 3000000 results (0.3 seconds) for tesla */}
-            About {data?.searchInformation.formattedTotalResults} results ({data?.searchInformation.formattedSearchTime} seconds) for {term}
+          About {data?.searchInformation.formattedTotalResults} results ({data?.searchInformation.formattedSearchTime} seconds) for {term}
           </p>
+
+          {data?.items.map(item => (
+            <div className='searchPage_result'>
+              <a href={item.link}>
+                {item.displayLink}
+              </a>
+              <a className='searchPage_resultTitle'
+                href={item.link}>
+                <h2>{item.title}</h2>
+              </a>
+              <p className='searchPage_resultSnippet'>
+                {item.snippet}
+              </p>
+            </div>
+          ))}
         </div>
       )}
     </div>
