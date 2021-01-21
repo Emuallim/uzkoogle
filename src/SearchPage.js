@@ -97,6 +97,7 @@ function SearchPage() {
               </p>
             </div>
           ))}
+          
         </div>
       )}
     </div>
