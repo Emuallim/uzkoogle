@@ -6,9 +6,10 @@
 
 .home_header{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 20px 30px;
   align-items: center;
+  min-width: 13vw;
 }
 
 .home_header a{
@@ -21,14 +22,7 @@
   text-decoration: underline;
 }
 
-.home_headerRight{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /* min-width: 13vw; */
-}
-
-.home_headerRight > .MuiSvgIcon-root{
+.home_header > .MuiSvgIcon-root{
   /* MuiSvgIcon-root is the className @material-ui gives EVERY icon */
   margin-right: 20px;
 }

@@ -11,6 +11,8 @@ import ImageIcon from "@material-ui/icons/Image";
 import LocalOfferIcon from "@material-ui/icons/LocalOffer";
 import RoomIcon from "@material-ui/icons/Room";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import AppsIcon from '@material-ui/icons/Apps';
+import { Avatar } from '@material-ui/core';
 
 // https://cse.google.com/cse/create/new
 
@@ -25,14 +27,19 @@ function SearchPage() {
   // console.log(data);
   return (
     <div className='searchPage'>
-
       <div className='searchPage_header'>
         <Link to="/">
           <img className="searchPage_logo"
             src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" />
         </Link>
         <div className='searchPage_headerBody'>
-          <Search hideButtons />
+          <div className='searchPage_top'>
+            <Search hideButtons />
+            <div className='searchPage_topIcons'>
+              <AppsIcon className="appsIcon" />
+              <Avatar />
+            </div>
+          </div>
           <div className="searchPage_options">
             <div className="searchPage_optionsLeft">
               <div className="searchPage_option">

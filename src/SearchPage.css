@@ -1,3 +1,8 @@
+.searchPage{
+  width: 1349px;
+  font-size: 16.2px;
+}
+
 .searchPage_header{
   display: flex;
   position: sticky;
@@ -10,13 +15,14 @@
   border-bottom: 1px solid lightgray;
 }
 
+
 .searchPage_logo{
   object-fit: contain;
   height: 50px;
   margin-right: 50px;
 }
 
-.searchPage_headerBody>.search>.search_input{
+.searchPage_headerBody>.searchPage_top>.search>.search_input{
   /* this over writes the search styles */
   margin-top: 0;
   width: unset;
@@ -24,10 +30,23 @@
   max-width: unset;
 }
 
+.searchPage_top{
+  width: 1120px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.searchPage_topIcons{
+  display: flex;
+  margin-right: 20px;
+  justify-content: space-between;
+}
+
 .searchPage_options{
   display: flex;
   align-items: center;
   color: grey;
+  font-size: 1rem;
 }
 
 .searchPage_options a,
