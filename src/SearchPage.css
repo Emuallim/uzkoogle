@@ -5,6 +5,7 @@
   background: white;
   z-index: 100;
   align-items: flex-start;
+  /* width: 100vw; */
   padding: 30px;
   border-bottom: 1px solid lightgray;
 }
@@ -69,6 +70,13 @@
   /* margin-top:20px;
   margin-left:240px;
   margin-bottom:100px; */
+}
+
+.searchPage_resultImage{
+  object-fit: contain;
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
 }
 
 .searchPage_resultTitle{

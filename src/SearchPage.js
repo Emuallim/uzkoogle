@@ -11,19 +11,18 @@ import ImageIcon from "@material-ui/icons/Image";
 import LocalOfferIcon from "@material-ui/icons/LocalOffer";
 import RoomIcon from "@material-ui/icons/Room";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-// left off at 02:52:00
 
 // https://cse.google.com/cse/create/new
 
 function SearchPage() {
   const [{ term = 'tesla' }, dispatch] = useStateValue();
-  // LIVE GOOGLE API CALL which is INSANE!
+  // Live GOOGLE API call which is INSANE!
   // const { data } = useGoogleSearch(term);
 
   const data = Response; //copied api call from response.js
   // uncomment useGoogleSearch once done with the page
 
-  console.log(data);
+  // console.log(data);
   return (
     <div className='searchPage'>
 
@@ -86,6 +85,12 @@ function SearchPage() {
           {data?.items.map(item => (
             <div className='searchPage_result'>
               <a href={item.link}>
+                {item.pagemap?.cse_image?.length > 0 && item.pagemap?.cse_image[0]?.src && (
+                  <img className="searchPage_resultImage"
+                    src={
+                      item.pagemap?.cse_image?.length > 0 && item.pagemap?.cse_image[0]?.src
+                    } alt="" />
+                )}
                 {item.displayLink}
               </a>
               <a className='searchPage_resultTitle'
@@ -97,7 +102,7 @@ function SearchPage() {
               </p>
             </div>
           ))}
-          
+
         </div>
       )}
     </div>

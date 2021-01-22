@@ -25,7 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 13vw;
+  /* min-width: 13vw; */
 }
 
 .home_headerRight > .MuiSvgIcon-root{
