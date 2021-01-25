@@ -5,7 +5,7 @@
   background: white;
   z-index: 100;
   align-items: flex-start;
-  /* width: 100vw; */
+  min-width: 1319px;
   padding: 20px 10px 10px 20px;
   border-bottom: 1px solid lightgray;
 }
@@ -41,7 +41,6 @@
   display: flex;
   justify-content: flex-end;
   flex:4;
-
 }
 
 .searchPage_options{

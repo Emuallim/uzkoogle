@@ -19,9 +19,9 @@ import { PlayCircleFilledWhite } from '@material-ui/icons';
 function SearchPage() {
   const [{ term = 'tesla' }, dispatch] = useStateValue();
   // Live GOOGLE API call which is INSANE!
-  // const { data } = useGoogleSearch(term);
+  const { data } = useGoogleSearch(term);
 
-  const data = Response; //copied api call from response.js
+  // const data = Response; //copied api call from response.js
   // uncomment useGoogleSearch once done with the page
 
   // console.log(data);
