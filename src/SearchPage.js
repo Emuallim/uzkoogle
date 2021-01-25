@@ -8,11 +8,11 @@ import Search from "./Search";
 import SearchIcon from "@material-ui/icons/Search";
 import DescriptionIcon from "@material-ui/icons/Description";
 import ImageIcon from "@material-ui/icons/Image";
-import LocalOfferIcon from "@material-ui/icons/LocalOffer";
-import RoomIcon from "@material-ui/icons/Room";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import AppsIcon from '@material-ui/icons/Apps';
 import { Avatar } from '@material-ui/core';
+import { PlayCircleFilledWhite } from '@material-ui/icons';
+
 
 // https://cse.google.com/cse/create/new
 
@@ -30,7 +30,7 @@ function SearchPage() {
       <div className='searchPage_header'>
         <Link to="/">
           <img className="searchPage_logo"
-            src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" />
+            src={process.env.PUBLIC_URL + '/googlemini.png'} />
         </Link>
         <div className='searchPage_headerBody'>
           <div className='searchPage_top'>
@@ -47,24 +47,21 @@ function SearchPage() {
                 <Link to="/all">All</Link>
               </div>
               <div className="searchPage_option">
-                <DescriptionIcon />
-                <Link to="/news">News</Link>
-              </div>
-              <div className="searchPage_option">
                 <ImageIcon />
                 <Link to="/images">Images</Link>
               </div>
               <div className="searchPage_option">
-                <LocalOfferIcon />
-                <Link to="/shopping">shopping</Link>
+                <DescriptionIcon />
+                <Link to="/news">News</Link>
               </div>
               <div className="searchPage_option">
-                <RoomIcon />
-                <Link to="/maps">maps</Link>
+                <PlayCircleFilledWhite />
+                <Link to="/videos">Videos</Link>
               </div>
+
               <div className="searchPage_option">
                 <MoreVertIcon />
-                <Link to="/more">more</Link>
+                <Link to="/more">More</Link>
               </div>
             </div>
 

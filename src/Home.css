@@ -29,10 +29,12 @@
 
 .appsIcon{
   padding: 8px;
+  color:#5f6368;
+  margin-right: 10px;
 }
 
 .appsIcon:hover{
-  background: silver;
+  background: rgba(60,64,67,0.08);
   border-radius: 50%;
   padding: 8px;
 }
