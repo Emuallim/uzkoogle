@@ -1,3 +1,7 @@
+.searchPage{
+  border: 1px solid red;
+}
+
 .searchPage_header{
   display: flex;
   position: sticky;
@@ -5,9 +9,12 @@
   background: white;
   z-index: 100;
   align-items: flex-start;
-  min-width: 1319px;
   padding: 20px 10px 10px 20px;
   border-bottom: 1px solid lightgray;
+}
+
+.searchPage_headerBody{
+  width: 100vw;
 }
 
 
@@ -27,9 +34,12 @@
   max-width: unset;
 }
 
+.searchPage_headerBody{
+  border: 1px solid blue;
+}
+
 .searchPage_top{
   margin-top: 10px;
-  width: 1120px;
   display: flex;
 }
 
@@ -45,7 +55,6 @@
 
 .searchPage_options{
   display: flex;
-  align-items: center;
   color: grey;
   font-size: 14px;
 }
@@ -85,9 +94,10 @@
 }
 
 .searchPage_results{
-  width:660px;
+  width:690px;
   margin: 10px 0 100px 170px;
   color: #5f6368;
+  border: 1px solid green;
 }
 
 .searchPage_resultImage{
