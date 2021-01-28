@@ -32,14 +32,14 @@ function SearchPage() {
           <img className="searchPage_logo"
             src={process.env.PUBLIC_URL + '/googlemini.png'} />
         </Link>
+        <div className="searchPage_input">
+          <Search hideButtons />
+        </div>
+        <div className='searchPage_login'>
+          <AppsIcon className="appsIcon" />
+          <Avatar />
+        </div>
         <div className='searchPage_headerBody'>
-          <div className='searchPage_top'>
-            <Search hideButtons />
-            <div className='searchPage_topIcons'>
-              <AppsIcon className="appsIcon" />
-              <Avatar />
-            </div>
-          </div>
           <div className="searchPage_options">
             <div className="searchPage_optionsLeft">
               <div className="searchPage_option">
@@ -109,6 +109,9 @@ function SearchPage() {
 
         </div>
       )}
+      <div className="searchPage_footer">
+        <h1>Footer</h1>
+      </div>
     </div>
   )
 }
