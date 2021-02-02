@@ -114,7 +114,7 @@ function SearchPage() {
             ))}
           </div>
         )}
-        <div className='searchPage_resultsContainer-RightBorder'>borderrrrrrrrrrrrrrrrr</div>
+        <div className='searchPage_resultsContainer-right'>right border</div>
       </div>
       <div className="searchPage_footer">
         <h1>Footer</h1>
