@@ -1,4 +1,4 @@
-.searchPage_input>
+.searchPage_search>
 .search>.search_input{
   /* this over writes the search styles */
   margin-top: 0;
@@ -16,37 +16,44 @@
 
 .searchPage{
   display: grid;
-  grid-template-columns: 1fr 7fr 2fr;
+  grid-template-columns: 1fr 6fr 3fr;
+  grid-gap: 10px;
+  grid-template-areas: 
+    "logo search login"
+    "... options ..."
+    "... results ..."
+    "... footer ..."
 }
 
-.searchPage_headerTop{
+/* .searchPage_headerTop{
   display: grid;
   grid-template-columns: 1fr 7fr 2fr;
   justify-content: space-between;
-}
+} */
 
 .searchPage_logo{
+  grid-area: logo;
   border: 1px solid red;
 }
 
-.searchPage_input{
+.searchPage_search{
+  grid-area: search;
   border: 1px solid purple;
   flex: 1;
 }
 
 .searchPage_login{
+  grid-area: login;
   border: 1px solid blue;
   display: flex ;
   justify-content: flex-end;
 }
 
 .searchPage_options{
+  grid-area: options;
   display: flex;
   color: grey;
   font-size: 14px;
-}
-
-.searchPage_headerBody{
   border: 1px solid green;
 }
 
@@ -54,22 +61,17 @@
   object-fit: contain;
   width: 100px;
   height: 50px;
-  margin-right: 30px;
-  margin-top: 10px;
-}
-
-.searchPage_resultsContainer{
-  padding-left: 135px;
-  display: grid;
- grid-template-columns: 8fr 2fr;
-}
-
-.searchPage_resultsContainer-leftBorder{
-  margin-right: 10px;
 }
 
 .searchPage_results{
-  border: 1px solid orangered;
+  grid-area: results;
+  /* border: 1px solid orangered; */
+  display: grid;
+  grid-gap: 20px;
+}
+
+.searchPage_result{
+  border: 1px solid green;
 }
 
 .searchPage_resultImage{
@@ -80,5 +82,6 @@
 }
 
 .searchPage_footer{
+  grid-area: footer;
   border: 1px solid black;
 }
