@@ -28,10 +28,12 @@ function SearchPage() {
   return (
     <div className='searchPage'>
       {/* TOP THREE -------------------- */}
-      <Link to="/">
-        <img className="searchPage_logo"
-          src={process.env.PUBLIC_URL + '/googlemini.png'} />
-      </Link>
+      <div className="searchPage_logoDiv">
+        <Link to="/">
+          <img className='searchPage_logoImg'
+            src={process.env.PUBLIC_URL + '/googlemini.png'} />
+        </Link>
+      </div>
       <div className="searchPage_search">
         <Search hideButtons />
       </div>

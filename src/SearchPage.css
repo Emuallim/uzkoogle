@@ -2,6 +2,7 @@
 .search>.search_input{
   /* this over writes the search styles */
   margin-top: 0;
+  margin-bottom: 0;
   width: unset;
   margin: unset;
   max-width: unset;
@@ -9,8 +10,7 @@
 
 .searchPage_options, 
 .searchPage_optionsLeft,
-.searchPage_optionsRight,
-.searchPage_resultsContainer{
+.searchPage_optionsRight{
   display: flex;
 }
 
@@ -25,15 +25,25 @@
     "... footer ..."
 }
 
-/* .searchPage_headerTop{
-  display: grid;
-  grid-template-columns: 1fr 7fr 2fr;
-  justify-content: space-between;
-} */
+.searchPage_logoDiv,
+.searchPage_search,
+.searchPage_login{
+  
+  background: white;
+  position: sticky;
+  z-index: 100;
+  top: 0;
+}
 
-.searchPage_logo{
+.searchPage_logoDiv{
   grid-area: logo;
   border: 1px solid red;
+}
+
+.searchPage_logoImg{
+  object-fit: contain;
+  width: 100px;
+  height: 50px;
 }
 
 .searchPage_search{
@@ -57,11 +67,11 @@
   border: 1px solid green;
 }
 
-.searchPage_logo{
-  object-fit: contain;
-  width: 100px;
-  height: 50px;
+.searchPage_optionsLeft{
+  align-items: center;
 }
+
+
 
 .searchPage_results{
   grid-area: results;
