@@ -1,11 +1,14 @@
 .searchPage_search>
 .search>.search_input{
   /* this over writes the search styles */
-  margin-top: 0;
-  margin-bottom: 0;
   width: unset;
   margin: unset;
   max-width: unset;
+}
+
+.searchPage_search>
+.search>.search_btns{
+  margin: unset;
 }
 
 .searchPage_options, 
@@ -16,8 +19,8 @@
 
 .searchPage{
   display: grid;
-  grid-template-columns: 1fr 6fr 3fr;
-  grid-gap: 10px;
+  grid-template-columns: 1fr 6fr 4fr;
+  grid-gap: 5px;
   grid-template-areas: 
     "logo search login"
     "... options ..."
@@ -28,8 +31,8 @@
 .searchPage_logoDiv,
 .searchPage_search,
 .searchPage_login{
-  
   background: white;
+  margin-top: 30px;
   position: sticky;
   z-index: 100;
   top: 0;
@@ -37,7 +40,7 @@
 
 .searchPage_logoDiv{
   grid-area: logo;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .searchPage_logoImg{
@@ -48,13 +51,14 @@
 
 .searchPage_search{
   grid-area: search;
-  border: 1px solid purple;
+  /* border: 1px solid purple; */
   flex: 1;
 }
 
 .searchPage_login{
+  align-items: center;
   grid-area: login;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   display: flex ;
   justify-content: flex-end;
 }
@@ -67,6 +71,7 @@
   border: 1px solid green;
 }
 
+.searchPage_optionsRight,
 .searchPage_optionsLeft{
   align-items: center;
 }
