@@ -28,19 +28,21 @@ function SearchPage() {
   return (
     <div className='searchPage'>
       {/* TOP THREE -------------------- */}
+      <div className='burger'>burger</div>
       <div className="searchPage_logoDiv">
         <Link to="/">
           <img className='searchPage_logoImg'
             src={process.env.PUBLIC_URL + '/googlemini.png'} />
         </Link>
       </div>
-      <div className="searchPage_search">
-        <Search hideButtons />
-      </div>
       <div className='searchPage_login'>
         <AppsIcon className="appsIcon" />
         <Avatar />
       </div>
+      <div className="searchPage_search">
+        <Search hideButtons />
+      </div>
+
 
 
       {/* OPTIONS -------------------- */}

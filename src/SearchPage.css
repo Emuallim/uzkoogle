@@ -17,17 +17,6 @@
   display: flex;
 }
 
-.searchPage{
-  display: grid;
-  grid-template-columns: 1fr 6fr 4fr;
-  grid-gap: 5px;
-  grid-template-areas: 
-    "logo search login"
-    "... options ..."
-    "... results ..."
-    "... footer ..."
-}
-
 .searchPage_logoDiv,
 .searchPage_search,
 .searchPage_login{
@@ -38,9 +27,63 @@
   top: 0;
 }
 
+.searchPage{
+  /* font-size: 62.5%; */
+  display: grid;
+  grid-template-columns: 1fr minmax(530px, 6fr) 4fr;
+  grid-gap: 5px;
+  grid-template-areas: 
+    "logo search login"
+    "... options ..."
+    "... results ..."
+    "... footer ..."
+}
+
+.burger{
+  display:none;
+}
+
+@media only screen and (max-width: 50em) {
+  .searchPage{
+    padding:10px;
+    background:yellow;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-areas: 
+    "... logo login"
+    "search search search"
+    "options options options"
+    "results results results"
+    "footer footer footer"
+  }
+
+  .searchPage_logoDiv,
+  .searchPage_search,
+  .searchPage_login,
+  .burger{
+    margin: 0 !important;
+    position: unset;
+    justify-content: center !important;
+    text-align: center;
+  }
+
+  .burger{
+    display: block;
+    background:white;
+    border: 1px solid green;
+  }
+
+  .appsIcon{
+    display:none !important;
+  }
+}
+
+
+
 .searchPage_logoDiv{
   grid-area: logo;
-  /* border: 1px solid red; */
+  min-width:130px;
+  margin-left: 20px;
+  border: 1px solid red;
 }
 
 .searchPage_logoImg{
@@ -51,14 +94,14 @@
 
 .searchPage_search{
   grid-area: search;
-  /* border: 1px solid purple; */
+  border: 1px solid purple;
   flex: 1;
 }
 
 .searchPage_login{
-  align-items: center;
   grid-area: login;
-  /* border: 1px solid blue; */
+  align-items: center;
+  border: 1px solid blue;
   display: flex ;
   justify-content: flex-end;
 }
@@ -80,7 +123,7 @@
 
 .searchPage_results{
   grid-area: results;
-  /* border: 1px solid orangered; */
+  border: 1px solid orangered;
   display: grid;
   grid-gap: 20px;
 }
