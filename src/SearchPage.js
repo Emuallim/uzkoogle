@@ -10,6 +10,7 @@ import DescriptionIcon from "@material-ui/icons/Description";
 import ImageIcon from "@material-ui/icons/Image";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import AppsIcon from '@material-ui/icons/Apps';
+import DehazeIcon from '@material-ui/icons/Dehaze';
 import { Avatar } from '@material-ui/core';
 import { PlayCircleFilledWhite } from '@material-ui/icons';
 
@@ -27,8 +28,25 @@ function SearchPage() {
   // console.log(data);
   return (
     <div className='searchPage'>
+      <div className='sideMenu'>
+        <a href="#Product" class="nav-link">Product</a>
+        <a href="#Basic_CSS" class="nav-link">Basic CSS</a>
+        <a href="#Visual_Design" class="nav-link">Visual Design</a>
+        <a href="#Accessibility" class="nav-link">Accessibility</a>
+        <a href="#Web_Design" class="nav-link">Web Design</a>
+        <a href="#CSS_Flexbox" class="nav-link">CSS Flexbox</a>
+        <a href="#CSS_Grid" class="nav-link">CSS Grid</a>
+        <a href="#WD_Projects" class="nav-link">WD Projects</a>
+        <a href="#Tribute" class="nav-link">Tribute</a>
+        <a href="#Survey" class="nav-link">Survey</a>
+        <a href="#Product" class="nav-link">Product</a>
+        <a href="#Tech_Doc" class="nav-link">Tech Doc</a>
+        <a href="#Portfolio" class="nav-link">Portfolio</a>
+      </div>
       {/* TOP THREE -------------------- */}
-      <div className='burger'>burger</div>
+      <div className='burger'>
+        <DehazeIcon style={{ fontSize: 28 }} />
+      </div>
       <div className="searchPage_logoDiv">
         <Link to="/">
           <img className='searchPage_logoImg'
@@ -49,24 +67,24 @@ function SearchPage() {
       <div className="searchPage_options">
         <div className="searchPage_optionsLeft">
           <div className="searchPage_option">
-            <SearchIcon />
+            <SearchIcon style={{ fontSize: 20 }} />
             <Link to="/all">All</Link>
           </div>
           <div className="searchPage_option">
-            <ImageIcon />
+            <ImageIcon style={{ fontSize: 20 }} />
             <Link to="/images">Images</Link>
           </div>
           <div className="searchPage_option">
-            <DescriptionIcon />
+            <DescriptionIcon style={{ fontSize: 20 }} />
             <Link to="/news">News</Link>
           </div>
           <div className="searchPage_option">
-            <PlayCircleFilledWhite />
+            <PlayCircleFilledWhite style={{ fontSize: 20 }} />
             <Link to="/videos">Videos</Link>
           </div>
 
           <div className="searchPage_option">
-            <MoreVertIcon />
+            <MoreVertIcon style={{ fontSize: 20 }} />
             <Link to="/more">More</Link>
           </div>
         </div>
@@ -111,6 +129,22 @@ function SearchPage() {
               </p>
             </div>
           ))}
+          <div className='searchPage_gooogle'>
+            <img className='searchPage_gooogleImg' src={process.env.PUBLIC_URL + '/goooogle.jpg'} />
+            <ul>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">6</a></li>
+              <li><a href="#">7</a></li>
+              <li><a href="#">8</a></li>
+              <li><a href="#">9</a></li>
+              <li><a href="#">10</a></li>
+              <li><a href="#">Next</a></li>
+            </ul>
+          </div>
         </div>
       )}
 
@@ -120,5 +154,17 @@ function SearchPage() {
     </div>
   )
 }
+
+// function openNav() {
+//   document.getElementsByClassName("navbar").style.width = "250px";
+//   document.getElementsByClassName("main-doc").style.marginLeft = "250px";
+//   // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+// }
+
+// function closeNav() {
+//   document.getElementById("navbar").style.width = "0";
+//   document.getElementById("main-doc").style.marginLeft = "0";
+//   document.body.style.backgroundColor = "white";
+// }
 
 export default SearchPage

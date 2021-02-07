@@ -15,20 +15,56 @@
 .searchPage_optionsLeft,
 .searchPage_optionsRight{
   display: flex;
+  justify-items: space-between;
 }
 
 .searchPage_logoDiv,
 .searchPage_search,
 .searchPage_login{
   background: white;
-  margin-top: 30px;
+  margin-top: 20px;
   position: sticky;
   z-index: 100;
   top: 0;
 }
 
+.sideMenu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #d96459;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+
+.sideMenu a {
+  padding: 8px 8px 8px 28px;
+  text-decoration: none;
+  font-size: 25px;
+  /*color: #818181;*/
+  display: block;
+  transition: 0.3s
+}
+
+.sideMenu a:hover, .offcanvas a:focus{
+  color: white;
+}
+
+.sideMenu .closebtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 40px;
+  margin-left: 50px;
+}
+
 .searchPage{
   /* font-size: 62.5%; */
+  padding:10px;
   display: grid;
   grid-template-columns: 1fr minmax(530px, 6fr) 4fr;
   grid-gap: 5px;
@@ -41,12 +77,13 @@
 
 .burger{
   display:none;
+  background:white;
+  align-items: center;
 }
 
 @media only screen and (max-width: 50em) {
   .searchPage{
-    padding:10px;
-    background:yellow;
+    /* background:yellow; */
     grid-template-columns: 1fr 8fr 1fr;
     grid-template-areas: 
     "... logo login"
@@ -57,19 +94,22 @@
   }
 
   .searchPage_logoDiv,
-  .searchPage_search,
-  .searchPage_login,
-  .burger{
+  .searchPage_login{
     margin: 0 !important;
-    position: unset;
-    justify-content: center !important;
+    position:unset;
     text-align: center;
   }
 
-  .burger{
-    display: block;
-    background:white;
-    border: 1px solid green;
+  .searchPage_search{
+    margin: 0;
+  }
+
+  .burger,
+  .searchPage_login{
+    display: flex;
+    border: 1px solid blue;
+    color: gray;
+    cursor: pointer;
   }
 
   .appsIcon{
@@ -78,11 +118,11 @@
 }
 
 
-
+/* SEARCH-BAR ----------------- */
 .searchPage_logoDiv{
   grid-area: logo;
   min-width:130px;
-  margin-left: 20px;
+  margin-left: 10px;
   border: 1px solid red;
 }
 
@@ -106,12 +146,16 @@
   justify-content: flex-end;
 }
 
+
+/* OPTIONS -------------------- */
 .searchPage_options{
   grid-area: options;
   display: flex;
   color: grey;
   font-size: 14px;
   border: 1px solid green;
+  justify-content: space-between;
+
 }
 
 .searchPage_optionsRight,
@@ -119,11 +163,23 @@
   align-items: center;
 }
 
+.searchPage_options a,
+.searchPage_optionsRight a{
+  text-decoration: none;
+  color: grey;
+}
+
+.searchPage_option{
+  display: flex;
+  align-items: center;
+  margin-right: 14px;
+}
 
 
+/* RESULTS -------------------- */
 .searchPage_results{
   grid-area: results;
-  border: 1px solid orangered;
+  /* border: 1px solid orangered; */
   display: grid;
   grid-gap: 20px;
 }
@@ -139,6 +195,59 @@
   margin-right: 10px;
 }
 
+.searchPage_resultTitle{
+  text-decoration:none;
+  font-size: 15px;
+}
+
+.searchPage_resultTitle:hover{
+  text-decoration:underline;
+}
+
+.searchPage_resultTitle > h2{
+  font-weight: 400;
+}
+
+.searchPage_resultSnippet{
+  margin-top: 10px;
+}
+
+/* Goooooooooogle ------------- */
+.searchPage_gooogle{
+  border: 1px solid orange;
+  text-align: center;
+}
+
+.searchPage_gooogleImg{
+  width: 300px;
+}
+
+.searchPage_gooogle>ul{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.searchPage_gooogle>ul>li>a{
+  margin: 5px;
+  text-decoration: none;
+}
+
+.searchPage_gooogle>ul>li:first-child{
+  margin-left: 40px;
+}
+
+.searchPage_gooogle>ul>li:last-child{
+  margin-left: 40px;
+}
+
+.searchPage_gooogle>ul>li>a:hover{
+  text-decoration: underline;
+}
+
+/* FOOTER -------------------- */
 .searchPage_footer{
   grid-area: footer;
   border: 1px solid black;

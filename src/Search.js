@@ -45,7 +45,7 @@ function Search({ hideButtons = false }) {
         <SearchIcon className="search_inputIcon" />
         <input value={input} onChange={e => setInput(e.target.value)} />
         {/* whatever you type in is captured in the state above */}
-        <MicIcon />
+        <MicIcon className="search_inputIcon" />
       </div>
       {!hideButtons ? (
         <div className="search_btns">
