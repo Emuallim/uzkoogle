@@ -28,6 +28,8 @@
   top: 0;
 }
 
+
+/* SIDEMENU ---------------- */
 .sideMenu {
   height: 100%;
   width: 0;
@@ -39,7 +41,6 @@
   overflow-x: hidden;
   transition: 0.5s;
 }
-
 
 .sideMenu a {
   padding: 8px 8px 8px 28px;
@@ -80,6 +81,7 @@
   background:white;
   align-items: center;
 }
+
 
 @media only screen and (max-width: 50em) {
   .searchPage{
@@ -155,7 +157,6 @@
   font-size: 14px;
   border: 1px solid green;
   justify-content: space-between;
-
 }
 
 .searchPage_optionsRight,
@@ -212,6 +213,7 @@
   margin-top: 10px;
 }
 
+
 /* Goooooooooogle ------------- */
 .searchPage_gooogle{
   border: 1px solid orange;
@@ -231,12 +233,12 @@
 }
 
 .searchPage_gooogle>ul>li>a{
-  margin: 5px;
+  margin-right: 11px;
   text-decoration: none;
 }
 
 .searchPage_gooogle>ul>li:first-child{
-  margin-left: 40px;
+  margin-left: 55px;
 }
 
 .searchPage_gooogle>ul>li:last-child{
