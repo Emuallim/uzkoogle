@@ -149,7 +149,7 @@ function SearchPage() {
       )}
 
       <div className="searchPage_footer">
-        <h1>Footer</h1>
+        <div>Footer</div>
       </div>
     </div>
   )
