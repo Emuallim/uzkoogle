@@ -73,7 +73,7 @@
     "logo search login"
     "... options ..."
     "... results ..."
-    "footer footer footer"
+    "footBeg footMid footEnd"
 }
 
 .burger{
@@ -86,13 +86,19 @@
 @media only screen and (max-width: 50em) {
   .searchPage{
     /* background:yellow; */
+    padding: 10px;
     grid-template-columns: 1fr 8fr 1fr;
     grid-template-areas: 
     "... logo login"
     "search search search"
     "options options options"
     "results results results"
-    "footer footer footer"
+    "footMid footMid footMid"
+  }
+
+  .searchPage_footBeg,
+  .searchPage_footEnd{
+    display: none;
   }
 
   .searchPage_logoDiv,
@@ -116,6 +122,14 @@
 
   .appsIcon{
     display:none !important;
+  }
+
+  .searchPage_gooogle{
+    margin-bottom: 20px !important;
+  }
+
+  .searchPage_footMid{
+    margin: -10px;
   }
 }
 
@@ -219,6 +233,7 @@
 .searchPage_gooogle{
   border: 1px solid orange;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .searchPage_gooogleImg{
@@ -251,13 +266,23 @@
 }
 
 /* FOOTER -------------------- */
-.searchPage_footer{
+.searchPage_footBeg{
+  grid-area: footBeg;
   background: silver;
-  grid-area: footer;
-  padding-left: 145px;
+  margin-right: -5px;
 }
-.searchPage_footer>div{
+
+.searchPage_footMid{
+  grid-area: footMid;
+  background: silver;
+
+}
+
+.searchPage_footEnd{
+  grid-area: footEnd;
+  background: silver;
+  margin-left: -5px;
+}
+.searchPage_footMid>div{
   border: 1px solid red;
-  max-width: 60%;
-  min-width: 530px;
 }

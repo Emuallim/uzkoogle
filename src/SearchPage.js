@@ -148,9 +148,11 @@ function SearchPage() {
         </div>
       )}
 
-      <div className="searchPage_footer">
-        <div>Footer</div>
+      <div className="searchPage_footBeg"></div>
+      <div className="searchPage_footMid">
+        <div>Foot</div>
       </div>
+      <div className="searchPage_footEnd"></div>
     </div>
   )
 }
