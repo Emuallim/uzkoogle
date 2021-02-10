@@ -71,7 +71,7 @@
   grid-gap: 5px;
   grid-template-areas: 
     "logo search login"
-    "... options ..."
+    "left options right"
     "... results ..."
     "footBeg footMid footEnd"
 }
@@ -96,11 +96,6 @@
     "footMid footMid footMid"
   }
 
-  .searchPage_footBeg,
-  .searchPage_footEnd{
-    display: none;
-  }
-
   .searchPage_logoDiv,
   .searchPage_login{
     margin: 0 !important;
@@ -120,7 +115,11 @@
     cursor: pointer;
   }
 
-  .appsIcon{
+  .appsIcon,
+  .searchPage_options-leftMargin,
+  .searchPage_options-rightMargin,
+  .searchPage_footBeg,
+  .searchPage_footEnd{
     display:none !important;
   }
 
@@ -139,7 +138,7 @@
   grid-area: logo;
   min-width:130px;
   margin-left: 10px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .searchPage_logoImg{
@@ -150,7 +149,7 @@
 
 .searchPage_search{
   grid-area: search;
-  border: 1px solid purple;
+  /* border: 1px solid purple; */
   flex: 1;
 }
 
@@ -158,19 +157,36 @@
   grid-area: login;
   margin-right: 10px;
   align-items: center;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   display: flex ;
   justify-content: flex-end;
 }
 
 
 /* OPTIONS -------------------- */
+.searchPage_options-leftMargin{
+  grid-area: left;
+  margin-right: -5px;
+}
+
+.searchPage_options-rightMargin{
+  grid-area: right;
+  margin-left: -5px;
+}
+
+.searchPage_options-leftMargin,
+.searchPage_options-rightMargin,
+.searchPage_options{
+  border-bottom: 1px solid lightgrey;
+}
+
 .searchPage_options{
   grid-area: options;
   display: flex;
   color: grey;
   font-size: 14px;
-  border: 1px solid green;
+  /* border: 1px solid green; */
+  padding: 20px 0 15px 0;
   justify-content: space-between;
 }
 
@@ -195,7 +211,6 @@
 /* RESULTS -------------------- */
 .searchPage_results{
   grid-area: results;
-  /* border: 1px solid orangered; */
   display: grid;
   grid-gap: 20px;
 }
@@ -233,7 +248,7 @@
 .searchPage_gooogle{
   border: 1px solid orange;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .searchPage_gooogleImg{
@@ -266,23 +281,42 @@
 }
 
 /* FOOTER -------------------- */
+.searchPage_footBeg,
+.searchPage_footMid,
+.searchPage_footEnd{
+  background: #F2F2F2;
+  border-top: 1px solid #DADCE0;
+}
 .searchPage_footBeg{
   grid-area: footBeg;
-  background: silver;
   margin-right: -5px;
 }
 
 .searchPage_footMid{
   grid-area: footMid;
-  background: silver;
-
+  /* border: 1px solid blue; */
 }
 
 .searchPage_footEnd{
   grid-area: footEnd;
-  background: silver;
   margin-left: -5px;
 }
-.searchPage_footMid>div{
-  border: 1px solid red;
+
+.searchPage_footMid-child>*{
+  padding: 10px !important;
+  color: grey;
+  /* border: 1px solid#d96459; */
+}
+
+.searchPage_footMid-child>ul{
+  border-top: 1px solid #DADCE0;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.searchPage_footMid-child>ul>li>a{
+  margin-right: 30px;
+  text-decoration: none;
 }

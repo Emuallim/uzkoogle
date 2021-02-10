@@ -64,6 +64,7 @@ function SearchPage() {
 
 
       {/* OPTIONS -------------------- */}
+      <div className='searchPage_options-leftMargin'></div>
       <div className="searchPage_options">
         <div className="searchPage_optionsLeft">
           <div className="searchPage_option">
@@ -99,6 +100,7 @@ function SearchPage() {
           </div>
         </div>
       </div>
+      <div className='searchPage_options-rightMargin'></div>
 
       {/* RESULTS -------------------------- */}
       {term && (
@@ -150,7 +152,19 @@ function SearchPage() {
 
       <div className="searchPage_footBeg"></div>
       <div className="searchPage_footMid">
-        <div>Foot</div>
+        <div className='searchPage_footMid-child'>
+          <div>
+            <span>Uzbekistan</span>
+            <span>Tashkent - From your Internet adress - Use precise location</span>
+            <span>Learn more</span>
+          </div>
+          <ul>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Send Feedback</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
       </div>
       <div className="searchPage_footEnd"></div>
     </div>
