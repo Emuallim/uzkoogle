@@ -43,6 +43,8 @@ function SearchPage() {
         <a href="#Tech_Doc" class="nav-link">Tech Doc</a>
         <a href="#Portfolio" class="nav-link">Portfolio</a>
       </div>
+
+
       {/* TOP THREE -------------------- */}
       <div className='burger'>
         <DehazeIcon style={{ fontSize: 28 }} />
@@ -102,6 +104,7 @@ function SearchPage() {
       </div>
       <div className='searchPage_options-rightMargin'></div>
 
+
       {/* RESULTS -------------------------- */}
       {term && (
         // render the results ONLY if there is search term
@@ -154,9 +157,9 @@ function SearchPage() {
       <div className="searchPage_footMid">
         <div className='searchPage_footMid-child'>
           <div>
-            <span>Uzbekistan</span>
-            <span>Tashkent - From your Internet adress - Use precise location</span>
-            <span>Learn more</span>
+            <span>Uzbekistan | </span>
+            <span>Tashkent - From your Internet adress - Use precise location - </span>
+            <a href='#'>Learn more</a>
           </div>
           <ul>
             <li><a href="#">Help</a></li>

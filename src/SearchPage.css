@@ -110,7 +110,7 @@
   .burger,
   .searchPage_login{
     display: flex;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     color: gray;
     cursor: pointer;
   }
@@ -148,6 +148,7 @@
 }
 
 .searchPage_search{
+  /* top: 10px; */
   grid-area: search;
   /* border: 1px solid purple; */
   flex: 1;
@@ -216,7 +217,7 @@
 }
 
 .searchPage_result{
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 
 .searchPage_resultImage{
@@ -244,9 +245,9 @@
 }
 
 
-/* Goooooooooogle ------------- */
+/* Google Next ------------- */
 .searchPage_gooogle{
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   text-align: center;
   margin-bottom: 20px;
 }
@@ -305,7 +306,11 @@
 .searchPage_footMid-child>*{
   padding: 10px !important;
   color: grey;
-  /* border: 1px solid#d96459; */
+}
+
+.searchPage_footMid-child>div>a{
+  text-decoration: none;
+  color: grey;
 }
 
 .searchPage_footMid-child>ul{
@@ -319,4 +324,5 @@
 .searchPage_footMid-child>ul>li>a{
   margin-right: 30px;
   text-decoration: none;
+  color: grey;
 }
