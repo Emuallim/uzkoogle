@@ -1,3 +1,5 @@
+*{padding: 0;}
+
 .searchPage_search>
 .search>.search_input{
   /* this over writes the search styles */
@@ -29,40 +31,6 @@
 }
 
 
-/* SIDEMENU ---------------- */
-.sideMenu {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #d96459;
-  overflow-x: hidden;
-  transition: 0.5s;
-}
-
-.sideMenu a {
-  padding: 8px 8px 8px 28px;
-  text-decoration: none;
-  font-size: 25px;
-  /*color: #818181;*/
-  display: block;
-  transition: 0.3s
-}
-
-.sideMenu a:hover, .offcanvas a:focus{
-  color: white;
-}
-
-.sideMenu .closebtn {
-  position: absolute;
-  top: 0;
-  right: 10px;
-  font-size: 40px;
-  margin-left: 50px;
-}
-
 .searchPage{
   /* font-size: 62.5%; */
   /* padding:10px; */
@@ -70,19 +38,17 @@
   grid-template-columns: 1fr minmax(530px, 6fr) 4fr;
   grid-gap: 5px;
   grid-template-areas: 
-    "logo search login"
-    "left options right"
+  "logo search login"
+  "left options right"
     "... results ..."
     "footBeg footMid footEnd"
+  }
+
+/* NAVBAR ---------------- */
+.navbar{
+  display: none !important;
 }
-
-.burger{
-  display:none;
-  background:white;
-  align-items: center;
-}
-
-
+  
 @media only screen and (max-width: 50em) {
   .searchPage{
     /* background:yellow; */
@@ -107,9 +73,10 @@
     margin: 0;
   }
 
-  .burger,
+  .navbar,
   .searchPage_login{
-    display: flex;
+    padding: 0 1rem 0 .5rem;
+    display: flex !important;
     /* border: 1px solid blue; */
     color: gray;
     cursor: pointer;
@@ -295,7 +262,6 @@
 
 .searchPage_footMid{
   grid-area: footMid;
-  /* border: 1px solid blue; */
 }
 
 .searchPage_footEnd{
