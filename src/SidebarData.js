@@ -15,7 +15,7 @@ import FeedbackIcon from "@material-ui/icons/Feedback";
 export const SidebarData = [
   {
     title: 'Home',
-    path: '/',
+    path: '/search',
     icon: <HomeIcon />,
     cName: 'nav-text'
   }, {

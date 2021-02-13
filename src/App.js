@@ -9,12 +9,8 @@ function App() {
     <div className="app">
       <Router>
         <Switch>
-          <Route path="/search">
-            <SearchPage />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+          <Route path="/search" component={SearchPage} />
+          <Route path="/" component={Home} />
         </Switch>
       </Router>
     </div>
