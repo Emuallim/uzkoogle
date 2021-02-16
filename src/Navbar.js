@@ -9,6 +9,7 @@ function Navbar() {
   const [sidebar, setSidebar] = useState(false)
   const showSidebar = () => setSidebar(!sidebar)
 
+  const newPage = () => { window.open("/") }
 
   return (
     <div>
@@ -26,8 +27,8 @@ function Navbar() {
           </li>
           {SidebarData.map((item, index) => {
             return (
-              <li key={index} className={item.cName}>
-                <Link to={item.path} >
+              <li key={index} className={item.cName} >
+                <Link to={item.path} target='_blank' >
                   {item.icon}
                   <span>{item.title}</span>
                 </Link>
