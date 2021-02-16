@@ -3,13 +3,12 @@ import './Navbar.css';
 import DehazeIcon from '@material-ui/icons/Dehaze';
 import { Link } from "react-router-dom";
 import { SidebarData } from './SidebarData';
-import { useHistory } from "react-router-dom";
 // import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false)
   const showSidebar = () => setSidebar(!sidebar)
-  const history = useHistory();
+
 
   return (
     <div>
