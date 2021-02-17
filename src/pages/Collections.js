@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import "./Collections.css";
 
 function Collections() {
   return (
-    <div>
+    <div className="collections">
       <h1>Collections</h1>
     </div>
   )

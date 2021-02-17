@@ -46,7 +46,7 @@
 
 /* NAVBAR ---------------- */
 .navbar{
-  display: none !important;
+  display: none;
 }
   
 @media only screen and (max-width: 50em) {
@@ -76,8 +76,7 @@
   .navbar,
   .searchPage_login{
     padding: 0 1rem 0 .5rem;
-    display: flex !important;
-    /* border: 1px solid blue; */
+    display: flex;
     color: gray;
     cursor: pointer;
   }

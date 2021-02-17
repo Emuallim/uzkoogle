@@ -1,5 +1,6 @@
 import React from 'react';
 import './SearchPage.css';
+import Navbar from './Navbar';
 import { useStateValue } from "./StateProvider";
 import useGoogleSearch from './useGoogleSearch';
 import Response from "./response";
@@ -9,16 +10,9 @@ import DescriptionIcon from "@material-ui/icons/Description";
 import ImageIcon from "@material-ui/icons/Image";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import AppsIcon from '@material-ui/icons/Apps';
-import Navbar from './Navbar';
 import { Avatar } from '@material-ui/core';
 import { PlayCircleFilledWhite } from '@material-ui/icons';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from "./Home";
 import Search from "./Search";
-import Collections from './pages/Collections';
-import OfflineSearches from './pages/OfflineSearches';
-import SearchHistory from './pages/SearchHistory';
-import { useHistory } from "react-router-dom";
 
 
 // https://cse.google.com/cse/create/new
@@ -31,28 +25,12 @@ function SearchPage() {
   const data = Response; //copied api call from response.js
   // uncomment useGoogleSearch once done with the page
 
-  const history = useHistory();
-
-  // const toHome = e => {
-  //   e.preventDefault();
-  //   //stops page refresh
-  //   history.push('/');
-  // }
-
   // console.log(data);
   return (
     <div className='searchPage'>
       {/* TOP THREE -------------------- */}
-      <div className='navbar'>
-        <Router>
-          <Navbar />
-          <Switch>
-            <Route path='/home' component={Home} />
-            <Route path='/search-history' component={SearchHistory} />
-            <Route path='/collections' component={Collections} />
-            <Route path='/offline-searches' component={OfflineSearches} />
-          </Switch>
-        </Router>
+      <div className="navbar">
+        <Navbar />
       </div>
       <div className="searchPage_logoDiv">
         <Link to="/">
