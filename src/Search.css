@@ -1,7 +1,7 @@
 .search_input{
   display: flex;
   align-items: center;
-  box-shadow: 0 2px 5px 1px rgba(64,60,67,.16);
+  box-shadow: 0 2px 5px 2px rgba(64,60,67,.16);
   height: 25px;
   padding: 10px 20px;
   border-radius: 999px;
@@ -22,7 +22,8 @@
   outline-width: 0;
 }
 
-.search_inputIcon{
+.search_inputIcon, 
+.search_input>input[placeholder]{
   color: gray;
 }
 
