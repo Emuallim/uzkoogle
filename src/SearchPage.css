@@ -5,7 +5,10 @@
   /* this over writes the search styles */
   width: unset;
   margin: unset;
+  padding: unset;
   max-width: unset;
+  box-shadow:unset;
+  /* height: unset; */
 }
 
 .searchPage_search>
@@ -81,6 +84,10 @@
     cursor: pointer;
   }
 
+  .searchPage_results{
+    margin: 10px !important;
+  }
+
   .appsIcon,
   .searchPage_options-leftMargin,
   .searchPage_options-rightMargin,
@@ -116,7 +123,11 @@
 .searchPage_search{
   /* top: 10px; */
   grid-area: search;
-  /* border: 1px solid purple; */
+  border: 1px solid gray;
+  background: white;
+  border-radius: 30px;
+  height: 22px;
+  padding: 12px;
   flex: 1;
 }
 
@@ -133,12 +144,12 @@
 /* OPTIONS -------------------- */
 .searchPage_options-leftMargin{
   grid-area: left;
-  margin-right: -5px;
+  margin-right: -25px;
 }
 
 .searchPage_options-rightMargin{
   grid-area: right;
-  margin-left: -5px;
+  margin-left: -25px;
 }
 
 .searchPage_options-leftMargin,
@@ -154,6 +165,7 @@
   font-size: 14px;
   /* border: 1px solid green; */
   padding: 20px 0 15px 0;
+  margin: 0 10px;
   justify-content: space-between;
 }
 
@@ -180,6 +192,7 @@
   grid-area: results;
   display: grid;
   grid-gap: 20px;
+  margin: 0 20px;
 }
 
 .searchPage_result{
@@ -282,7 +295,7 @@
   border-top: 1px solid #DADCE0;
   display: flex;
   list-style-type: none;
-  margin: 0;
+  margin-left: 16px;
   padding: 0;
 }
 
