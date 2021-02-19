@@ -26,7 +26,7 @@
 .searchPage_logoDiv,
 .searchPage_search,
 .searchPage_login{
-  background: white;
+  /* background: white; */
   margin-top: 30px;
   position: sticky;
   z-index: 100;
@@ -74,6 +74,7 @@
 
   .searchPage_search{
     margin: 0;
+    top:-1;
   }
 
   .navbar,
@@ -105,6 +106,11 @@
   }
 }
 
+@media only screen and (max-width: 30em) {
+  .searchPage_optionsRight{
+    display: none;
+  }
+}
 
 /* SEARCH-BAR ----------------- */
 .searchPage_logoDiv{
@@ -122,13 +128,27 @@
 
 .searchPage_search{
   /* top: 10px; */
-  grid-area: search;
-  border: 1px solid gray;
   background: white;
+  grid-area: search;
+  border: 1px solid lightgray;
   border-radius: 30px;
-  height: 22px;
-  padding: 12px;
+  margin-bottom: 10px;
+  height: 20px;
+  padding: 10px;
   flex: 1;
+}
+
+.searchPage_search 
+.search_input>input{
+  /* border: 1px solid red; */
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.searchPage_search 
+.search_inputIcon{
+  margin: 0 10px;
+  margin-bottom: 5px;
 }
 
 .searchPage_login{
@@ -164,7 +184,7 @@
   color: grey;
   font-size: 14px;
   /* border: 1px solid green; */
-  padding: 20px 0 15px 0;
+  padding: 10px 0 15px 0;
   margin: 0 10px;
   justify-content: space-between;
 }
@@ -195,8 +215,8 @@
   margin: 0 20px;
 }
 
-.searchPage_result{
-  /* border: 1px solid green; */
+.searchPage_resultsCount{
+  color: grey;
 }
 
 .searchPage_resultImage{
@@ -221,6 +241,7 @@
 
 .searchPage_resultSnippet{
   margin-top: 10px;
+  color: darkslategray;
 }
 
 
