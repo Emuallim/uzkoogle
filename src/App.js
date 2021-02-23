@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Collections from './pages/Collections';
 import OfflineSearches from './pages/OfflineSearches';
 import SearchHistory from './pages/SearchHistory';
+import Help from './pages/Help';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path='/search-history' component={SearchHistory} />
             <Route path='/collections' component={Collections} />
             <Route path='/offline-searches' component={OfflineSearches} />
+            <Route path='/Help' component={Help} />
           </div>
         </Switch>
       </Router>
