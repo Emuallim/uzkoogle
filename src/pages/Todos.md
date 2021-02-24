@@ -9,8 +9,8 @@ with the following features:
 
 ## TODO
 
-- [ ] ⌨️ Get user value from input and save it to variable numberGuess
-- [ ] ➡️ Generate a random number 1 to 100 and save it to variable correctNumber
+- [x] ⌨️ Get user value from input and save it to variable numberGuess
+- [x] ➡️ Generate a random number 1 to 100 and save it to variable correctNumber
 - [ ] 🗃 Console whether the guess is too high/low or is correct inside playGame
 - [ ] 🔍 Create a function called displayResult to move the logic for if the guess
 - [ ] 🙈 Complete the showYouWon, showNumAbove, showNumBelow functions
