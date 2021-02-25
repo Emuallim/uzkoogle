@@ -34,9 +34,6 @@ function Help() {
       </div>
     </div>
   )
-
-
-
 }
 
 export default Help
