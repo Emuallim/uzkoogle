@@ -11,6 +11,10 @@ function Help() {
 
   const playGame = () => {
     let numberGuess = textInput.current.value;
+    displayResult(numberGuess);
+  }
+
+  const displayResult = (numberGuess) => {
     if (numberGuess > randomNumber) {
       document.querySelector('h1').innerHTML = "too high";
     } else if (numberGuess < randomNumber) {
