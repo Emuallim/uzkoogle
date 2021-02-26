@@ -9,18 +9,23 @@ function Help() {
   let textInput = React.createRef();
   let randomNumber = Math.floor(Math.random() * 101);
 
+
   const playGame = () => {
     let numberGuess = textInput.current.value;
     displayResult(numberGuess);
+    console.log(randomNumber);
   }
 
   const displayResult = (numberGuess) => {
     if (numberGuess > randomNumber) {
       document.querySelector('h1').innerHTML = "too high";
+      showNumberAbove();
     } else if (numberGuess < randomNumber) {
       document.querySelector('h1').innerHTML = "too low";
+      showNumberBelow();
     } else {
       document.querySelector('h1').innerHTML = "correct";
+      showYouWon();
     }
   }
 
@@ -39,8 +44,21 @@ function Help() {
     return dialog;
   }
 
-  const showYouWon = (won) => {
-    let dialog = getDialog(won);
+  const showNumberAbove = () => {
+    const text = "Your guess is too high!";
+    let dialog = getDialog("warning", text);
+    document.querySelector("#result").innerHTML = dialog;
+  }
+
+  const showNumberBelow = () => {
+    const text = "Your guess is too low!";
+    let dialog = getDialog("warning", text);
+    document.querySelector("#result").innerHTML = dialog;
+  }
+
+  const showYouWon = () => {
+    const text = "Awesome job, you got it!";
+    let dialog = getDialog("won", text);
     document.querySelector("#result").innerHTML = dialog;
   }
 
