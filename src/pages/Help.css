@@ -1,3 +1,17 @@
+:root {
+  --mainWhite: #f5f5f5;
+  --mainGreen: #80cfa9;
+  --mainBlack: #333333;
+}
+
+.danger {
+  background-color: lightcoral;
+}
+
+.success {
+  background-color: var(--mainGreen);
+}
+
 .game-board{
   flex-direction: column;
 }
