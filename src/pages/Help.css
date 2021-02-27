@@ -1,15 +1,19 @@
-:root {
-  --mainWhite: #f5f5f5;
-  --mainGreen: #80cfa9;
-  --mainBlack: #333333;
+#result>*{
+  color: white;
+  width: 180px;
+  padding: 5px 10px;
 }
 
-.danger {
+.too-high {
   background-color: lightcoral;
 }
 
+.too-low {
+  background-color: lightskyblue;
+}
+
 .success {
-  background-color: var(--mainGreen);
+  background-color: #80cfa9;
 }
 
 .game-board{

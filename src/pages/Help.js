@@ -9,6 +9,7 @@ function Help() {
   let textInput = React.createRef();
   let randomNumber = Math.floor(Math.random() * 101);
 
+
   const playGame = () => {
     let numberGuess = textInput.current.value;
     displayResult(numberGuess);
@@ -17,12 +18,48 @@ function Help() {
 
   const displayResult = (numberGuess) => {
     if (numberGuess > randomNumber) {
-      document.querySelector('#result').innerHTML = "Your guess is too high";
+      showNumberAbove();
     } else if (numberGuess < randomNumber) {
-      document.querySelector('#result').innerHTML = "Your guess is too low";
+      showNumberBelow();
     } else {
-      document.querySelector('#result').innerHTML = "Awesome sauce! You got it!";
+      showYouWon();
     }
+  }
+
+  const getDialog = (dialogType, text) => {
+    let dialog;
+    switch (dialogType) {
+      case "too-high":
+        dialog = "<div class='alert too-high' role='alert'>";
+        break;
+      case "too-low":
+        dialog = "<div class='alert too-low' role='alert'>";
+        break;
+      case "success":
+        dialog = "<div class='alert success' role='alert'>";
+        break;
+    }
+    dialog += text;
+    dialog += "</div>"
+    return dialog;
+  }
+
+  const showNumberAbove = () => {
+    const text = "Your guess is too high!";
+    let dialog = getDialog("too-high", text);
+    document.querySelector("#result").innerHTML = dialog;
+  }
+
+  const showNumberBelow = () => {
+    const text = "Your guess is too low!";
+    let dialog = getDialog("too-low", text);
+    document.querySelector("#result").innerHTML = dialog;
+  }
+
+  const showYouWon = () => {
+    const text = "Awesome job, you got it!";
+    let dialog = getDialog("success", text);
+    document.querySelector("#result").innerHTML = dialog;
   }
 
   return (
@@ -33,7 +70,7 @@ function Help() {
       <div className="wrapper_body game-board">
         <h2>Guess the Number!</h2>
         <div>
-          <input type="number" max='100' ref={textInput} placeholder='Numbers from 1 to 100' />
+          <input type="number" max='100' ref={textInput} />
           <button onClick={playGame}>Click</button>
         </div>
         <div id="result"></div>
