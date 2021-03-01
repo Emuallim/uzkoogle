@@ -5,6 +5,7 @@ import Navbar from '../Navbar';
 
 function Help() {
   // Variable to store the list of guesses
+  let guesses = [];
 
   let textInput = React.createRef();
   let randomNumber = Math.floor(Math.random() * 101);
@@ -13,6 +14,7 @@ function Help() {
   const playGame = () => {
     let numberGuess = textInput.current.value;
     displayResult(numberGuess);
+    saveGuessHistory(numberGuess);
     console.log(randomNumber);
   }
 
@@ -60,6 +62,11 @@ function Help() {
     const text = "Awesome job, you got it!";
     let dialog = getDialog("success", text);
     document.querySelector("#result").innerHTML = dialog;
+  }
+
+  const saveGuessHistory = (numberGuess) => {
+    guesses.push(numberGuess);
+    console.log(guesses);
   }
 
   return (

@@ -13,7 +13,8 @@ with the following features:
 - [x] 🗃 Console whether the guess is too high/low or is correct inside playGame
 - [x] 🔍 Create a function called displayResult to move the logic for if else
 - [x] 🙈 Complete the showYouWon, showNumAbove, showNumBelow functions
-- [ ] ⌨️ Save the guess history in a variable called guuess
+- [x] 🙈 Use the ShowYouWon function within displayResults to display the correct dialogue
+- [ ] ⌨️ Save the guess history in a variable called guess
 - [ ] 🗃 Display the guess history using displayHistory() function
 - [ ] 🔍 Use the initGame() function to restart the game
 
