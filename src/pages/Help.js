@@ -66,7 +66,17 @@ function Help() {
 
   const saveGuessHistory = (numberGuess) => {
     guesses.push(numberGuess);
-    console.log(guesses);
+    displayHistory(guesses);
+  }
+
+  const displayHistory = (guesses) => {
+    let list = "<ul class='list'>"
+    for (let i = 0; i < guesses.length; i++) {
+      list = `<li class='list-item'>You guessed ${guesses}</li>`
+      console.log(list);
+    }
+    list += "</ul> <br>";
+    document.querySelector('#history').innerHTML = list;
   }
 
   return (
@@ -81,6 +91,7 @@ function Help() {
           <button onClick={playGame}>Click</button>
         </div>
         <div id="result"></div>
+        <div id="history"></div>
       </div>
     </div>
   )

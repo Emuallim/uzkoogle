@@ -14,7 +14,7 @@ with the following features:
 - [x] 🔍 Create a function called displayResult to move the logic for if else
 - [x] 🙈 Complete the showYouWon, showNumAbove, showNumBelow functions
 - [x] 🙈 Use the ShowYouWon function within displayResults to display the correct dialogue
-- [ ] ⌨️ Save the guess history in a variable called guess
+- [x] ⌨️ Save the guess history in a variable called guess
 - [ ] 🗃 Display the guess history using displayHistory() function
 - [ ] 🔍 Use the initGame() function to restart the game
 
