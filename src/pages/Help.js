@@ -4,8 +4,7 @@ import "./Help.css";
 import Navbar from '../Navbar';
 
 function Help() {
-  // Variable to store the list of guesses
-  let guesses = [];
+  let guesses = [];// to store the list of guesses
 
   let textInput = React.createRef();
   let randomNumber = Math.floor(Math.random() * 101);
@@ -69,13 +68,12 @@ function Help() {
     displayHistory(guesses);
   }
 
-  const displayHistory = (guesses) => {
+  const displayHistory = () => {
     let list = "<ul class='list'>"
     for (let i = 0; i < guesses.length; i++) {
-      list = `<li class='list-item'>You guessed ${guesses}</li>`
-      console.log(list);
+      list += `<li class='list-item'>You guessed ${guesses[i]}</li>`
     }
-    list += "</ul> <br>";
+    list += "</ul>";
     document.querySelector('#history').innerHTML = list;
   }
 
@@ -91,7 +89,8 @@ function Help() {
           <button onClick={playGame}>Click</button>
         </div>
         <div id="result"></div>
-        <div id="history"></div>
+        <div id="history">
+        </div>
       </div>
     </div>
   )
