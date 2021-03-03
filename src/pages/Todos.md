@@ -18,7 +18,7 @@ with the following features:
 - [x] ⌨️ Save the guess history in a variable called guess
 - [x] 🗃 Display the guess history using displayHistory() function
 - [x] 🗃 Alert message onpress if there is no value in the input
-- [ ] 🔍 Use the initGame() function to restart the game
+- [x] 🔍 Use the restart() function to restart the game
 
 
 ## What's next?

@@ -4,10 +4,14 @@ import "./Help.css";
 import Navbar from '../Navbar';
 
 function Help() {
+  const correctNumber = () => {
+    let random = Math.floor(Math.random() * 101);
+    return random;
+  }
+
+  let randomNumber = correctNumber();
   let guesses = [];// to store the list of guesses
   let textInput = React.createRef();
-  let randomNumber = Math.floor(Math.random() * 101);
-
 
   const playGame = (e) => {
     let numberGuess = textInput.current.value;
@@ -27,6 +31,7 @@ function Help() {
     guesses = [];
     document.querySelector('#history').innerHTML = "";
     document.querySelector('#result').innerHTML = "";
+    randomNumber = correctNumber();
   }
 
 
