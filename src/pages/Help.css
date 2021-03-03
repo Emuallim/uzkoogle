@@ -1,9 +1,41 @@
+.game-board{
+  height: unset;
+  min-height: 50vh;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.input_container{
+  display: flex;
+  align-items: center;
+}
+
+input{
+  font-size: 20px;
+  width: 137px;
+}
+
+button{
+  font-size: 16px;
+  padding: 2px;
+}
+
 #result>*{
   color: white;
   width: 180px;
   padding: 5px 10px;
   margin-top: 5px;
 }
+
+#history>ul>li{
+  list-style: none;
+  border: 1px solid grey;
+  width: 178px;
+  padding: 2px 10px;
+  margin-top: 5px;
+}
+
+
 
 .too-high {
   background-color: lightcoral;
@@ -15,8 +47,4 @@
 
 .success {
   background-color: #80cfa9;
-}
-
-.game-board{
-  flex-direction: column;
 }
