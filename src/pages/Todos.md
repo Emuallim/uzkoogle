@@ -9,6 +9,7 @@ with the following features:
 ## TODO
 
 - [x] ⌨️ Get user value from input and save it to variable numberGuess
+- [x] ⌨️ Add onKeyPress (Enter) event to input if there is value in input
 - [x] ➡️ Generate a random number 1 to 100 and save it to variable correctNumber
 - [x] 🗃 Console whether the guess is too high/low or is correct inside playGame
 - [x] 🔍 Create a function called displayResult to move the logic for if else

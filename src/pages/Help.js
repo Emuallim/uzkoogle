@@ -23,8 +23,10 @@ function Help() {
     }
   }
 
-  const restart = e => {
-    // asd
+  const restart = () => {
+    guesses = [];
+    document.querySelector('#history').innerHTML = "";
+    document.querySelector('#result').innerHTML = "";
   }
 
 
