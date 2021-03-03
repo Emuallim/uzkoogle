@@ -30,13 +30,6 @@ function Search({ hideButtons = false }) {
     history.push('/search');
   }
 
-  // my looong solution which doesn't work in react
-  // document.addEventListener("keyup", (e) => {
-  //   if (e.keyCode == 13) {
-  //     console.log("you hit Enter");
-  //   }
-  // })
-
   // Soony's TRICK: change the "search" div to form and set the google search btn type to "submit"
 
   return (

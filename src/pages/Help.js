@@ -5,26 +5,31 @@ import Navbar from '../Navbar';
 
 function Help() {
   let guesses = [];// to store the list of guesses
-
   let textInput = React.createRef();
   let randomNumber = Math.floor(Math.random() * 101);
 
-  const playGame = e => {
-    e.preventDefault();
+
+  const playGame = (e) => {
     let numberGuess = textInput.current.value;
-    displayResult(numberGuess);
-    saveGuessHistory(numberGuess);
-    console.log(randomNumber);
+    if (e.key === "Enter") {
+      if (numberGuess == "") {
+        alert('Please enter a number');
+      } else {
+        textInput.current.value = "";
+        displayResult(numberGuess);
+        saveGuessHistory(numberGuess);
+        console.log("the secret number is " + randomNumber);
+      }
+    }
   }
 
-  const restart = () => {
-    document.querySelector('#history').innerHTML = "";
+  const restart = e => {
+    // asd
   }
+
 
   const displayResult = (numberGuess) => {
-    if (numberGuess == "") {
-      alert('Please enter valid number');
-    } else if (numberGuess > randomNumber) {
+    if (numberGuess > randomNumber) {
       showNumberAbove();
     } else if (numberGuess < randomNumber) {
       showNumberBelow();
@@ -70,12 +75,8 @@ function Help() {
   }
 
   const saveGuessHistory = (numberGuess) => {
-    if (numberGuess == "") {
-      alert('Please enter valid number');
-    } else {
-      guesses.push(numberGuess);
-      displayHistory(guesses);
-    }
+    guesses.push(numberGuess);
+    displayHistory(guesses);
   }
 
   const displayHistory = (guesses) => {
@@ -88,21 +89,20 @@ function Help() {
   }
 
   return (
-    <form className="wrapper">
+    <div className="wrapper">
       <div className="wrapper_navbar">
         <Navbar />
       </div>
       <div className="wrapper_body game-board">
         <h2>Guess the Number!</h2>
         <div className='input_container'>
-          <input type="number" max='100' ref={textInput} placeholder="press enter" />
-          <button onClick={playGame} hidden>Restart</button>
+          <input type="number" ref={textInput} placeholder="press enter" onKeyPress={playGame} />
           <button onClick={restart}>Restart</button>
         </div>
         <div id="result"></div>
         <div id="history"></div>
       </div>
-    </form>
+    </div>
   )
 }
 

@@ -16,7 +16,7 @@ with the following features:
 - [x] 🙈 Use the ShowYouWon function within displayResults to display the correct dialogue
 - [x] ⌨️ Save the guess history in a variable called guess
 - [x] 🗃 Display the guess history using displayHistory() function
-- [x] 🗃 onclick Alert message if there is no value in the input
+- [x] 🗃 Alert message onpress if there is no value in the input
 - [ ] 🔍 Use the initGame() function to restart the game
 
 
