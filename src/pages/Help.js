@@ -22,7 +22,7 @@ function Help() {
         textInput.current.value = "";
         displayResult(numberGuess);
         saveGuessHistory(numberGuess);
-        console.log("the secret number is " + randomNumber);
+        // console.log("the secret number is " + randomNumber);
       }
     }
   }
