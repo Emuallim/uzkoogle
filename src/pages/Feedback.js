@@ -7,10 +7,46 @@ function Feedback() {
     return num1 + num2;
   }
 
-  const minuteToSecond = () => {
-    let input = prompt('enter number');
-    let result = input * 60;
-    document.querySelector('h2').innerHTML = `${input} minute(s) = ${result} seconds`;
+
+  const testFunction = () => {
+    const input = prompt('enter a number');
+    const output = document.querySelector('h3');
+    goodOrBadMovie(output, input);
+  }
+
+  const convert = (output, input) => {
+    let months = input * 12;
+    let weeks = input * 52;
+    let days = input * 365;
+    let hours = input * 8760;
+    let minutes = input * 525000;
+    let seconds = input * 31536000;
+    output.innerHTML = `You are only ${months} months, ${weeks} weeks, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds old! Sooo young!`;
+  }
+
+  let fruit = "banana,apple,orange,strawberry";
+  let fruits = ['banana', 'apple', 'orange', 'strawberry'];
+
+  const firstItem = () => {
+    console.log(fruits[0]);
+    console.log(fruit.slice(0, 6));
+    console.log(fruit.split(','));
+    return fruits[0];
+  }
+
+
+  const goodOrBadMovie = (output, input) => {
+    // if (input < 7) {
+    //   output.innerHTML = "It's a bad movie";
+    // } else if (input >= 7) {
+    //   output.innerHTML = 'its a good movie!';
+    // }
+
+    if (input < 7) {
+      output.innerHTML = "It's a bad movie";
+    } else {
+      output.innerHTML = 'its a good movie!';
+    }
   }
 
 
@@ -20,7 +56,7 @@ function Feedback() {
         <Navbar />
       </div>
       <div className="wrapper_body">
-        <h2 onClick={minuteToSecond}>Click Here!</h2>
+        <h3 onClick={testFunction}>Click Here!</h3>
       </div>
     </div>
   )
