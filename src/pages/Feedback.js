@@ -14,6 +14,7 @@ function Feedback() {
     // goodOrBadMovie(output, input);
     // convert(output, input);
     isEmptyString(input, output);
+    // findMin(output);
   }
 
   const convert = (output, input) => {
@@ -50,6 +51,11 @@ function Feedback() {
     } else {
       output.innerText = false;
     }
+  }
+
+  const findMin = (output) => {
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    // output.innerHTML = Math.apply.min(numbers);
   }
 
 
