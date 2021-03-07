@@ -11,7 +11,9 @@ function Feedback() {
   const testFunction = () => {
     const input = prompt('enter a number');
     const output = document.querySelector('h3');
-    goodOrBadMovie(output, input);
+    // goodOrBadMovie(output, input);
+    // convert(output, input);
+    isEmptyString(input, output);
   }
 
   const convert = (output, input) => {
@@ -34,18 +36,19 @@ function Feedback() {
     return fruits[0];
   }
 
-
   const goodOrBadMovie = (output, input) => {
-    // if (input < 7) {
-    //   output.innerHTML = "It's a bad movie";
-    // } else if (input >= 7) {
-    //   output.innerHTML = 'its a good movie!';
-    // }
-
     if (input < 7) {
       output.innerHTML = "It's a bad movie";
     } else {
       output.innerHTML = 'its a good movie!';
+    }
+  }
+
+  const isEmptyString = (input, output) => {
+    if (input == "") {
+      output.innerText = true;
+    } else {
+      output.innerText = false;
     }
   }
 
