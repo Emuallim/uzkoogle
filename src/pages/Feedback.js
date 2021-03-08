@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import "./Pages.css";
 import Navbar from '../Navbar';
 
@@ -11,10 +11,11 @@ function Feedback() {
   const testFunction = () => {
     // const input = prompt('enter a number');
     const output = document.querySelector('h3');
+    let numbers = [5, 3, 8, 4, 7, 2, 9];
     // goodOrBadMovie(output, input);
     // convert(output, input);
     // isEmptyString(input, output);
-    findMin(output);
+    findMin(output, numbers);
     // pushIntoArray();
   }
 
@@ -60,9 +61,28 @@ function Feedback() {
     console.log(emptyArray);
   }
 
-  const findMin = (output) => {
-    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    output.innerHTML = Math.max(...numbers);
+
+  const findMin = (output, numbers) => {
+    // find highest number
+    let max = -Infinity;
+    for (let i = 0; i < numbers.length; i++) {
+      const elem = numbers[i];
+      if (elem > max) {
+        max = elem;
+      }
+    }
+    // find lowest number
+    let min = Infinity;
+    for (let i = 0; i < numbers.length; i++) {
+      const elem = numbers[i];
+      if (elem < min) {
+        min = elem;
+      }
+    }
+    // SHORT SOLUTION BELOW
+    // output.innerHTML = Math.max(...numbers);
+    // output.innerHTML = Math.min(...numbers);
+    output.innerHTML = `Min number: ${min} Max number: ${max}`;
   }
 
 
