@@ -67,17 +67,13 @@ function Feedback() {
     let max = -Infinity;
     for (let i = 0; i < numbers.length; i++) {
       const elem = numbers[i];
-      if (elem > max) {
-        max = elem;
-      }
+      if (elem > max) { max = elem }
     }
     // find lowest number
     let min = Infinity;
     for (let i = 0; i < numbers.length; i++) {
       const elem = numbers[i];
-      if (elem < min) {
-        min = elem;
-      }
+      if (elem < min) { min = elem }
     }
     // SHORT SOLUTION BELOW
     // output.innerHTML = Math.max(...numbers);
