@@ -9,12 +9,13 @@ function Feedback() {
 
 
   const testFunction = () => {
-    const input = prompt('enter a number');
+    // const input = prompt('enter a number');
     const output = document.querySelector('h3');
     // goodOrBadMovie(output, input);
     // convert(output, input);
-    isEmptyString(input, output);
-    // findMin(output);
+    // isEmptyString(input, output);
+    findMin(output);
+    // pushIntoArray();
   }
 
   const convert = (output, input) => {
@@ -53,9 +54,15 @@ function Feedback() {
     }
   }
 
+  const pushIntoArray = () => {
+    let emptyArray = [];
+    for (let i = 0; i < 10; i++) { emptyArray.push(i) }
+    console.log(emptyArray);
+  }
+
   const findMin = (output) => {
-    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    // output.innerHTML = Math.apply.min(numbers);
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    output.innerHTML = Math.max(...numbers);
   }
 
 
