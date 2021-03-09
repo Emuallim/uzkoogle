@@ -63,17 +63,16 @@ function Feedback() {
 
 
   const findMin = (output, numbers) => {
+    // let numbers = [5, 3, 8, 4, 7, 2, 9];
     // find highest number
     let max = -Infinity;
     for (let i = 0; i < numbers.length; i++) {
-      const elem = numbers[i];
-      if (elem > max) { max = elem }
+      if (numbers[i] > max) { max = numbers[i] }
     }
     // find lowest number
     let min = Infinity;
     for (let i = 0; i < numbers.length; i++) {
-      const elem = numbers[i];
-      if (elem < min) { min = elem }
+      if (numbers[i] < min) { min = numbers[i] }
     }
     // SHORT SOLUTION BELOW
     // output.innerHTML = Math.max(...numbers);
